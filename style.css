@@ -1,0 +1,82 @@
+ul{
+  list-style-type: none;
+  list-style-position: inside;
+  padding-left: 0;
+}
+
+html,body{
+  height: 100%;
+  width: 100%;
+}
+
+#container {
+  margin: auto;
+  text-align: center;
+}
+
+#poke-container {
+  margin: auto;
+  width: 90%;
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+
+#header-container {
+  border-radius: 0px !important;
+  text-align: center;
+  vertical-align: middle;
+}
+
+#header-text{
+  margin: 0 auto;
+}
+
+#generate-pokemon {
+  margin: 0 auto;
+  position: absolute;
+  /* top: 50%; */
+  left: 43.6%;
+}
+
+#delete-btn {
+  position: absolute;
+  left: 85%;
+  display: none;
+  margin-bottom: 5%;
+}
+
+button {
+  --b: 3px;   /* border thickness */
+  --s: .45em; /* size of the corner */
+  --color: #373B44;
+  
+  padding: calc(.5em + var(--s)) calc(.9em + var(--s));
+  color: var(--color);
+  --_p: var(--s);
+  background:
+    conic-gradient(from 90deg at var(--b) var(--b),#0000 90deg,var(--color) 0)
+    var(--_p) var(--_p)/calc(100% - var(--b) - 2*var(--_p)) calc(100% - var(--b) - 2*var(--_p));
+  transition: .3s linear, color 0s, background-color 0s;
+  outline: var(--b) solid #0000;
+  outline-offset: .6em;
+  font-size: 16px;
+  border: 0;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  margin: auto;
+}
+
+button:hover,
+button:focus-visible{
+  --_p: 0px;
+  outline-color: var(--color);
+  outline-offset: .05em;
+}
+
+button:active {
+  background: var(--color);
+  color: #fff;
+}
