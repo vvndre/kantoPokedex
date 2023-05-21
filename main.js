@@ -20,6 +20,10 @@ const getDeleteBtn = () => {
   return document.querySelector('#delete-btn')
 }
 
+window.onload = function(){
+  renderPokemon();
+}
+
 //fetch api
 const fetchKantoPokemon = () => {
   fetch('https://pokeapi.co/api/v2/pokemon?limit=151')
